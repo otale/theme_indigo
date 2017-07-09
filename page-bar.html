@@ -1,0 +1,21 @@
+<nav id="page-nav">
+    <div class="inner">
+
+        #if(articles.hasPrevPage)
+        <a class="extend prev" href="/page/${articles.prevPage}">上一页</a>
+        #end
+
+        #for(navIndex : articles.navPageNums)
+            #if(articles.pageNum== navIndex)
+            <span class="page-number current">${navIndex}</span>
+            #else
+            <a class="page-number" href="/page/${navIndex}">${navIndex}</a>
+            #end
+        #end
+
+        #if(articles.hasNextPage)
+        <a class="extend next" rel="next" href="/page/${articles.nextPage}">下一页</a>
+        #end
+
+    </div>
+</nav>

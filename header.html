@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>${head_title()}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="theme-color" content="#3F51B5">
+    <meta name="keywords" content="${meta_keywords()}">
+    <meta name="description" content="${meta_description()}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="${head_title()}" />
+    <meta property="og:url" content="${site_url()}" />
+    <meta property="og:site_name" content="${head_title()}" />
+    <meta property="og:description" content="${meta_description()}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="${head_title()}" />
+    <meta name="twitter:description" content="${meta_description()}" />
+
+    <link rel="shortcut icon" href="${theme_url('/static/favicon.ico')}">
+    <link rel="stylesheet" href="${theme_url('/static/css/style.css')}">
+    <script>window.lazyScripts = [];</script></head>
+<body>
+<div id="loading" class="active"></div>
+<aside id="menu">
+    <div class="inner flex-row-vertical">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+            <i class="icon icon-lg icon-close"></i>
+        </a>
+        <div class="brand-wrap" style="background-image:url(${theme_url('/static/img/brand.jpg')})">
+            <div class="brand">
+                <a href="${site_url()}" class="avatar waves-effect waves-circle waves-light">
+                    <img src="${theme_url('/static/img/face.jpg')}"></a>
+                <hgroup class="introduce">
+                    <h5 class="nickname">${theme_option('author') ?! 'biezhi'}</h5>
+                    <a href="mailto:biezhi.me@gmail.com" class="mail">biezhi.me#gmail.com</a>
+                </hgroup>
+            </div>
+        </div>
+        <div class="scroll-wrap flex-col">
+            <ul class="nav">
+                <li class="waves-block waves-effect active">
+                    <a href="${site_url()}">
+                        <i class="icon icon-lg icon-home"></i>首页</a>
+                </li>
+                <li class="waves-block waves-effect">
+                    <a href="${site_url('/archives')}">
+                        <i class="icon icon-lg icon-archives"></i>归档</a>
+                </li>
+                <li class="waves-block waves-effect">
+                    <a href="${site_url('/categories')}">
+                        <i class="icon icon-lg icon-tags"></i>分类</a>
+                </li>
+                <li class="waves-block waves-effect">
+                    <a href="${site_url('/about')}">
+                        <i class="icon icon-lg icon-tags"></i>关于</a>
+                </li>
+
+                #if(null != social_link('github'))
+                <li class="waves-block waves-effect">
+                    <a href="${social_link('github')}" target="_blank">
+                        <i class="icon icon-lg icon-github"></i>Github</a>
+                </li>
+                #end
+
+                #if(null != social_link('weibo'))
+                <li class="waves-block waves-effect">
+                    <a href="${social_link('weibo')}" target="_blank">
+                        <i class="icon icon-lg icon-weibo"></i>Weibo</a>
+                </li>
+                #end
+
+            </ul>
+        </div>
+    </div>
+</aside>
+<main id="main">
+    <header class="top-header" id="header">
+        <div class="flex-row">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+                <i class="icon icon-lg icon-navicon"></i>
+            </a>
+            <div class="flex-col header-title ellipsis">${head_title()}</div>
+            <div class="search-wrap" id="search-wrap">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                    <i class="icon icon-lg icon-chevron-left"></i>
+                </a>
+                <input id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                    <i class="icon icon-lg icon-search"></i>
+                </a>
+            </div>
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+                <i class="icon icon-lg icon-share-alt"></i>
+            </a>
+        </div>
+    </header>
+    <header class="content-header index-header">
+        <div class="container fade-scale">
+            <h1 class="title">${head_title()}</h1>
+            <h5 class="subtitle">${meta_description()}</h5></div>
+    </header>
