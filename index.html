@@ -1,27 +1,48 @@
 #include('./header.html',{home_page:1})
-    <div class="container body-wrap">
-        <ul class="post-list">
-            #for(article : articles.list)
-            <li class="post-list-item fade">
-                <article id="post-data-sync-in-vue-single-page-application" class="article-card article-type-post" itemprop="blogPost">
-                    <div class="post-meta">
-                        <time class="post-time" title="${created('yyyy年MM月dd日 HH:mm:ss')}" datetime="${created('EEE, d MMM yyyy')}" itemprop="datePublished">${created('yyyy年MM月dd日')}</time></div>
-                    <h3 class="post-title" itemprop="name">
-                        <a class="post-title-link" href="${permalink()}">${title()}</a></h3>
-                    <div class="post-content" id="post-content" itemprop="postContent">${intro(75)}
-                        <a href="${permalink()}" class="post-more waves-effect waves-button">阅读全文…</a></div>
-                    <div class="post-footer">
-                        <ul class="article-tag-list">
-                            #for(item : tag_list())
-                            <li class="article-tag-list-item">
-                                <a class="article-tag-list-link" href="/tag/${item}">${item}</a></li>
-                            #end
-                        </ul>
-                    </div>
-                </article>
-            </li>
-            #end
-        </ul>
-        #include('./page-bar.html')
+<header class="content-header index-header">
+    <div class="container fade-scale">
+        <h1 class="title">${head_title()}</h1>
+        <h5 class="subtitle">${meta_description()}</h5>
     </div>
+</header>
+<div class="container body-wrap">
+    <ul class="post-list">
+        #for(article : articles.list)
+        <li class="post-list-item fade">
+            <article id="post-data-sync-in-vue-single-page-application" class="article-card article-type-post"
+                     itemprop="blogPost">
+                <div class="post-meta">
+                    <time class="post-time" title="${created('yyyy年MM月dd日 HH:mm:ss')}" datetime="${created('EEE, d MMM yyyy')}" itemprop="datePublished">${created('yyyy-MM-dd')}</time>
+                    #if(category_list())
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item">
+                            #for(item : category_list())
+                            <a class="article-category-list-link" href="/category/${item}">${item}</a>
+                            #end
+                        </li>
+                    </ul>
+                    #end
+                </div>
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="${permalink()}">${title()}</a></h3>
+                <div class="post-content" id="post-content" itemprop="postContent">${intro(75)}
+                    <a href="${permalink()}" class="post-more waves-effect waves-button">阅读全文…</a>
+                </div>
+                #if(tag_list())
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+                        #for(item : tag_list())
+                        <li class="article-tag-list-item">
+                            <a class="article-tag-list-link waves-effect waves-button" href="/tag/${item}">${item}</a>
+                        </li>
+                        #end
+                    </ul>
+                </div>
+                #end
+            </article>
+        </li>
+        #end
+    </ul>
+    #include('./page-bar.html')
+</div>
 #include('./footer.html')

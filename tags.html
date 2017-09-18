@@ -1,0 +1,249 @@
+#include('./header.html',{home_page:1})
+<header class="content-header tags-header">
+    <div class="container fade-scale">
+        <h1 class="title">标签</h1>
+        <h5 class="subtitle">
+
+        </h5>
+    </div>
+    <div class="tabs-bar container">
+        <nav class="tags-list">
+            <a href="/tags" style="-webkit-order:-1;order:-1"
+               class="tags-list-item waves-effect waves-button waves-light active">全部</a>
+
+            #for(item : tags)
+            <a href="/tags/${item}" style="-webkit-order:${for.index-1};order:${for.index-1}" class="tags-list-item waves-effect waves-button waves-light">${item}</a>
+            #end
+
+        </nav>
+        <!-- PC show more-->
+        <div class="tags-list-more">
+            <a href="javascript:;" onclick="BLOG.tabBar(this)"
+               class="action tags-list-item waves-effect waves-circle waves-light"><i class="icon icon-ellipsis-h"></i></a>
+        </div>
+    </div>
+</header>
+<div class="container body-wrap fade">
+
+    <h3 class="archive-separator" id="tag-Java8">Java8</h3>
+    <div class="waterfall">
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-20 00:00:00" datetime="2017-07-19T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-20
+                    </time>
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/20/keep-up-with-java8-datetime.html">跟上Java8 -
+                        日期和时间实用技巧</a>
+                </h3>
+
+
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datetime/">datetime</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-19 00:00:00" datetime="2017-07-18T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-19
+                    </time>
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/19/keep-up-with-java8-functional-programming.html">跟上Java8
+                        - 函数式编程</a>
+                </h3>
+
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数式/">函数式</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+
+
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-18 00:00:00" datetime="2017-07-17T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-18
+                    </time>
+
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+                </div>
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/18/keep-up-with-java8-stream.html">跟上Java8 - Stream
+                        API快速入门</a>
+                </h3>
+
+                <div class="post-footer">
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/collect/">collect</a></li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/filter/">filter</a></li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/flatmap/">flatmap</a></li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/stream/">stream</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+
+
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-21 00:00:00" datetime="2017-07-20T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-21
+                    </time>
+
+
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+
+
+                </div>
+
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/21/keep-up-with-java8-features.html">跟上Java8 -
+                        你忽略了的新特性</a>
+                </h3>
+
+
+                <div class="post-footer">
+
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/features/">features</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </article>
+        </div>
+
+
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-16 00:00:00" datetime="2017-07-15T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-16
+                    </time>
+
+
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+
+
+                </div>
+
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/16/keep-up-with-java8.html">跟上Java8系列文章 - 带你实战Java8</a>
+                </h3>
+
+
+                <div class="post-footer">
+
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/lambda/">lambda</a></li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stream-api/">stream-api</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/系列/">系列</a></li>
+                    </ul>
+
+                </div>
+
+            </article>
+        </div>
+
+
+        <div class="waterfall-item">
+            <article class="article-card archive-article">
+                <div class="post-meta">
+                    <time class="post-time" title="2017-07-17 00:00:00" datetime="2017-07-16T16:00:00.000Z"
+                          itemprop="datePublished">2017-07-17
+                    </time>
+
+
+                    <ul class="article-category-list">
+                        <li class="article-category-list-item"><a class="article-category-list-link"
+                                                                  href="/categories/跟上Java8/">跟上Java8</a></li>
+                    </ul>
+
+
+                </div>
+
+
+                <h3 class="post-title" itemprop="name">
+                    <a class="post-title-link" href="/2017/07/17/keep-up-with-java8-lambda.html">跟上Java8 - 了解lambda</a>
+                </h3>
+
+
+                <div class="post-footer">
+
+                    <ul class="article-tag-list">
+                        <li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java8/">Java8</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/functional-interface/">functional-interface</a>
+                        </li>
+                        <li class="article-tag-list-item"><a class="article-tag-list-link"
+                                                             href="/tags/lambda/">lambda</a></li>
+                    </ul>
+
+                </div>
+
+            </article>
+        </div>
+
+
+    </div>
+
+
+</div>
+#include('./footer.html')
